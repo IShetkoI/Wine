@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android studio/Wine/app/src/main/res/drawable/cursor.xml" value="0.5692708333333333" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/drawable/no_background.xml" value="0.5692708333333333" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/activity_app_menu.xml" value="0.4547008547008547" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/activity_start_window.xml" value="0.25" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/fragment_distance.xml" value="0.34316239316239316" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/fragment_humidity.xml" value="0.4547008547008547" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/fragment_main_menu.xml" value="0.33" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/fragment_settings.xml" value="0.23369565217391305" />
+        <entry key="..\:/Android studio/Wine/app/src/main/res/layout/fragment_temperature.xml" value="0.4547008547008547" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

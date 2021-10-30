@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/set"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf0f3"
+    tools:context=".Home">
+
+    <RelativeLayout
+        android:id="@+id/main_holder"
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".Home">
+
+        <soup.neumorphism.NeumorphImageButton
+            style="@style/Widget.Neumorph.ImageButton"
+            android:id="@+id/bThermometer"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="58dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_thermometer"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <soup.neumorphism.NeumorphImageButton
+            style="@style/Widget.Neumorph.ImageButton"
+            android:id="@+id/bHumidity"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="59dp"
+            android:layout_marginEnd="25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_humidity"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <soup.neumorphism.NeumorphImageButton
+            style="@style/Widget.Neumorph.ImageButton"
+            android:id="@+id/bDistance"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="123dp"
+            android:layout_marginBottom="52dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_distance"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
