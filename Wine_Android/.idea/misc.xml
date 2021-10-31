@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/drawable/button_gradient.xml" value="0.4649789029535865" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/drawable/cursor.xml" value="0.46794871794871795" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_calculation.xml" value="0.22" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_distance.xml" value="0.4547008547008547" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_history.xml" value="0.4547008547008547" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_humidity.xml" value="0.4547008547008547" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_settings.xml" value="0.5" />
         <entry key="..\:/Android studio/Wine/app/src/main/res/drawable/cursor.xml" value="0.5692708333333333" />
         <entry key="..\:/Android studio/Wine/app/src/main/res/drawable/no_background.xml" value="0.5692708333333333" />
         <entry key="..\:/Android studio/Wine/app/src/main/res/layout/activity_app_menu.xml" value="0.4547008547008547" />
