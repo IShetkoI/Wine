@@ -13,7 +13,7 @@
     <RelativeLayout
         android:id="@+id/main_holder"
         android:layout_width="match_parent"
-        android:layout_height="465dp"
+        android:layout_height="600dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="168dp"
         android:visibility="invisible"
@@ -27,10 +27,11 @@
             android:layout_height="160dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginTop="58dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="120dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_thermometer"
+            app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <soup.neumorphism.NeumorphImageButton
@@ -40,10 +41,11 @@
             android:layout_height="160dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="59dp"
-            android:layout_marginEnd="25dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="14dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_humidity"
+            app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <soup.neumorphism.NeumorphImageButton
@@ -51,12 +53,15 @@
             style="@style/Widget.Neumorph.ImageButton"
             android:layout_width="160dp"
             android:layout_height="160dp"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="123dp"
-            android:layout_marginBottom="52dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_marginBottom="116dp"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_distance"
+            app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
 
@@ -84,6 +89,7 @@
         android:layout_marginTop="216dp"
         android:src="@drawable/image32719"
         android:transitionName="logo"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,6 +100,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="372dp"
         android:src="@drawable/three"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,6 +111,7 @@
         android:layout_marginTop="384dp"
         android:layout_marginEnd="4dp"
         android:src="@drawable/two"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,6 +124,8 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_home"
         android:visibility="invisible"
+        app:neumorph_shadowColorLight="#D5FAFD"
+        app:neumorph_shadowColorDark="#63EF96C5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -129,6 +139,8 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_history"
         android:visibility="invisible"
+        app:neumorph_shadowColorLight="@color/white"
+        app:neumorph_shadowColorDark="#43556F9A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bHome" />
 
@@ -141,6 +153,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_calc"
         android:visibility="invisible"
+        app:neumorph_shadowColorDark="#43556F9A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bSettings" />
 
@@ -153,6 +166,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/ic_settings"
         android:visibility="invisible"
+        app:neumorph_shadowColorDark="#43556F9A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
