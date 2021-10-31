@@ -10,9 +10,8 @@
 
     <RelativeLayout
         android:id="@+id/main_holder"
-        android:layout_width="412dp"
-        android:layout_height="465dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,17 +28,19 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="19dp"
+            app:neumorph_shadowColorDark="#43556F9A"
             app:neumorph_shapeType="pressed">
 
             <EditText
                 android:id="@+id/edit"
-                android:layout_width="340dp"
-                android:layout_height="54dp"
+                android:layout_width="300dp"
+                android:layout_height="59dp"
                 android:background="@drawable/no_background"
                 android:hint="ip address"
                 android:inputType="text"
                 android:paddingStart="10dp"
                 android:paddingEnd="10dp"
+                android:textColor="@color/text_color"
                 android:textCursorDrawable="@drawable/cursor" />
 
         </soup.neumorphism.NeumorphCardView>
@@ -58,7 +59,8 @@
             android:fontFamily="sans-serif-light"
             android:text="Save IP"
             android:textColor="@color/text_color"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            app:neumorph_shadowColorDark="#43556F9A" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
