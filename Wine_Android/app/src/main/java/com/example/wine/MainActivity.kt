@@ -5,6 +5,7 @@ package com.example.wine
 
 
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private val dataModel: DataModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Wine_Light)
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -63,15 +65,57 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bHome.setOnClickListener{
+            binding.bHome.setShadowColorLight(Color.parseColor("#D5FAFD"))
+            binding.bHome.setShadowColorDark(Color.parseColor("#63EF96C5"))
+
+            binding.bSettings.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bSettings.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bCalc.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bCalc.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bHistory.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bHistory.setShadowColorDark(Color.parseColor("#43556F9A"))
+
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Home.newInstance())
                 .commit()
         }
         binding.bSettings.setOnClickListener{
+            binding.bSettings.setShadowColorLight(Color.parseColor("#D5FAFD"))
+            binding.bSettings.setShadowColorDark(Color.parseColor("#63EF96C5"))
+
+            binding.bHome.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bHome.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bCalc.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bCalc.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bHistory.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bHistory.setShadowColorDark(Color.parseColor("#43556F9A"))
+
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Settings.newInstance())
+                .commit()
+        }
+        binding.bCalc.setOnClickListener{
+            binding.bCalc.setShadowColorLight(Color.parseColor("#D5FAFD"))
+            binding.bCalc.setShadowColorDark(Color.parseColor("#63EF96C5"))
+
+            binding.bHome.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bHome.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bSettings.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bSettings.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bHistory.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bHistory.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.main_holder, Calculation.newInstance())
                 .commit()
         }
     }
