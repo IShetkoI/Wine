@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/main_holder"
         android:layout_width="match_parent"
-        android:layout_height="465dp"
+        android:layout_height="600dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
