@@ -23,7 +23,7 @@
             style="@style/Widget.Neumorph.CardView"
             android:layout_width="295dp"
             android:layout_height="289dp"
-
+            app:neumorph_shadowColorDark="#43556F9A"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
@@ -39,6 +39,7 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:textColor="@color/text_color"
+
                 android:textSize="96sp" />
 
         </soup.neumorphism.NeumorphCardView>
@@ -52,6 +53,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
+            app:neumorph_shadowColorDark="#43556F9A"
             android:layout_marginStart="59dp"
             android:layout_marginTop="28dp"
             android:layout_marginEnd="54dp"
