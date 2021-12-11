@@ -9,6 +9,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -36,33 +37,107 @@ class MainActivity : AppCompatActivity() {
 
         pref = getSharedPreferences("MyPref", MODE_PRIVATE)
 
+        if (pref.getBoolean("firstrun", true)) {
+            val editor = pref.edit()
+
+            editor?.apply{
+                putString("ip", "")
+
+                editor.putInt("first", 1)
+                editor.putInt("second", 1)
+                editor.putInt("third", 1)
+                editor.putInt("fourth", 1)
+                editor.putInt("fifth", 1)
+
+                editor.putFloat("first1", 0F)
+                editor.putFloat("first2", 0F)
+                editor.putFloat("first3", 0F)
+                editor.putFloat("first4", 0F)
+                editor.putFloat("first5", 0F)
+
+                editor.putFloat("second1", 0F)
+                editor.putFloat("second2", 0F)
+                editor.putFloat("second3", 0F)
+                editor.putFloat("second4", 0F)
+                editor.putFloat("second5", 0F)
+
+                editor.putFloat("third1", 0F)
+                editor.putFloat("third2", 0F)
+                editor.putFloat("third3", 0F)
+                editor.putFloat("third4", 0F)
+                editor.putFloat("third5", 0F)
+
+                editor.putFloat("fourth1", 0F)
+                editor.putFloat("fourth2", 0F)
+                editor.putFloat("fourth3", 0F)
+                editor.putFloat("fourth4", 0F)
+                editor.putFloat("fourth5", 0F)
+
+                editor.putFloat("fifth1", 0F)
+                editor.putFloat("fifth2", 0F)
+                editor.putFloat("fifth3", 0F)
+                editor.putFloat("fifth4", 0F)
+                editor.putFloat("fifth5", 0F)
+
+                editor.putString("man_head", "0")
+                editor.putString("man_1", "0")
+                editor.putString("man_2", "0")
+                editor.putString("man_3", "0")
+                editor.putString("man_4", "0")
+                editor.putString("man_5", "0")
+            }?.apply()
+
+
+            pref.edit().putBoolean("firstrun", false).apply();
+        }
+
         Handler(Looper.getMainLooper()).postDelayed({
             val motionLayout: MotionLayout = binding.startWindow
-            motionLayout.transitionToEnd();
+            motionLayout.transitionToEnd()
         }, 2000)
 
 
         binding.bDistance.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
+            binding.bHistory.visibility = View.GONE
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Distance.newInstance())
                 .commit()
-            Toast.makeText(this, "Distance", Toast.LENGTH_SHORT).show()
         }
         binding.bThermometer.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
+            binding.bHistory.visibility = View.GONE
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Temperature.newInstance())
                 .commit()
-            Toast.makeText(this, "Temperature", Toast.LENGTH_SHORT).show()
         }
         binding.bHumidity.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
+            binding.bHistory.visibility = View.GONE
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Humidity.newInstance())
                 .commit()
-            Toast.makeText(this, "Humidity", Toast.LENGTH_SHORT).show()
         }
+        binding.bHistory.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
+            binding.bHistory.visibility = View.GONE
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.main_holder, History.newInstance())
+                .commit()
+        }
+
 
         binding.bHome.setOnClickListener{
             binding.bHome.setShadowColorLight(Color.parseColor("#D5FAFD"))
@@ -124,6 +199,9 @@ class MainActivity : AppCompatActivity() {
         if(ip.isNotEmpty()) {
             val editor = pref.edit()
             editor.putString("ip", ip)
+
+
+
             editor.apply()
         }
     }

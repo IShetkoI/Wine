@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/main_holder"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="571dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +32,7 @@
             app:neumorph_shapeType="pressed">
 
             <EditText
+                android:fontFamily="sans-serif-light"
                 android:id="@+id/edit"
                 android:layout_width="300dp"
                 android:layout_height="59dp"
@@ -59,7 +60,7 @@
             android:fontFamily="sans-serif-light"
             android:text="Save IP"
             android:textColor="@color/text_color"
-            android:textSize="14sp"
+            android:textSize="18sp"
             app:neumorph_shadowColorDark="#43556F9A" />
 
     </RelativeLayout>

@@ -11,10 +11,10 @@
     <RelativeLayout
         android:id="@+id/main_holder"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="561dp"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:context=".Home">
+        app:layout_constraintTop_toTopOf="parent">
 
         <soup.neumorphism.NeumorphImageButton
             android:id="@+id/bThermometer"
@@ -26,7 +26,7 @@
             android:layout_marginStart="14dp"
             android:layout_marginTop="120dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_thermometer"
+            android:src="@drawable/temp1"
             app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -40,7 +40,7 @@
             android:layout_marginTop="120dp"
             android:layout_marginEnd="14dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_humidity"
+            android:src="@drawable/temp2"
             app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -56,7 +56,7 @@
             android:layout_marginEnd="100dp"
             android:layout_marginBottom="116dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_distance"
+            android:src="@drawable/distance"
             app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 

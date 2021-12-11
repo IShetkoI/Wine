@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.gitlab.developerdeveloperdeveloper:androidutilslibrary:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/321f529251ed72e7c2bca8dfd30b9ea4/transformed/jetified-androidutilslibrary-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/321f529251ed72e7c2bca8dfd30b9ea4/transformed/jetified-androidutilslibrary-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/321f529251ed72e7c2bca8dfd30b9ea4/transformed/jetified-androidutilslibrary-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gitlab.developerdeveloperdeveloper/androidutilslibrary/1.0.0/c542678d34be3457175b48aa54b47c4d44f354c8/androidutilslibrary-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

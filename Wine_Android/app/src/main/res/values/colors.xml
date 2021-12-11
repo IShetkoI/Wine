@@ -8,5 +8,4 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="text_color">#193566</color>
-    <color name="grad">@drawable/button_gradient</color>
 </resources>

@@ -2,32 +2,104 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/set"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="561dp"
     android:background="#ecf0f3"
+    android:outlineAmbientShadowColor="@color/white"
+    android:outlineSpotShadowColor="@color/white"
     tools:context=".Distance">
 
-    <RelativeLayout
-        android:id="@+id/main_holder"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/NeumorphCardView"
+        style="@style/Widget.Neumorph.CardView"
+        android:layout_width="365dp"
+        android:layout_height="561dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".Distance">
+        app:neumorph_shadowColorDark="#43556F9A"
+        tools:ignore="ExtraText">
 
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/btsync"
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/sync"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+            app:neumorph_shadowColorDark="#43556F9A"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <ScrollView
-            android:layout_width="match_parent"
+            android:id="@+id/scrollView2"
+            android:layout_width="338dp"
             android:layout_height="match_parent">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clManually"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:layout_height="561dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/ncv"
+                    style="@style/Widget.Neumorph.CardView"
+                    android:layout_width="288dp"
+                    android:layout_height="57dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:neumorph_shadowColorDark="#43556F9A"
+                    app:neumorph_shapeType="flat">
+
+                    <TextView
+                        android:id="@+id/ed_header"
+                        android:layout_width="288dp"
+                        android:layout_height="57dp"
+                        android:layout_marginStart="-11dp"
+                        android:layout_marginTop="-11dp"
+                        android:background="@drawable/no_background"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/cardview_compat_inset_shadow"
+                        android:text="History"
+                        android:textColor="@color/text_color"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </soup.neumorphism.NeumorphCardView>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:minHeight="494dp"
+                    android:text=""
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ncv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </ScrollView>
-    </RelativeLayout>
+
+    </soup.neumorphism.NeumorphCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

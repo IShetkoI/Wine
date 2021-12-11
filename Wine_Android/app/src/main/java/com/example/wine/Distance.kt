@@ -1,6 +1,9 @@
 package com.example.wine
 
+import android.content.Context
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +16,8 @@ import com.example.wine.databinding.FragmentHomeBinding
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.IOException
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class Distance : Fragment() {
@@ -36,27 +41,110 @@ class Distance : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.bMeasureDistance.setOnClickListener{
-            dataModel.ip.observe(activity as LifecycleOwner, {
-                post(it)
-            })
+            post()
         }
     }
 
-    private fun post(ip: String) {
+    private fun post() {
         Thread {
-            request = Request.Builder().url("http://${ip}/distance").build()
+            val sharedPreferences = this.activity?.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+            val savedString = sharedPreferences?.getString("ip", null).toString()
+            val sdf = SimpleDateFormat("kk:mm:ss-dd/M/yyyy")
+            val currentDate = sdf.format(Date())
+            request = Request.Builder().url("http://${savedString}/distance/date-${currentDate}").build()
             try {
                 val response = client.newCall(request).execute()
                 if (response.isSuccessful) {
-                    println("3")
                     val resultText = response.body()?.string()
-                    println(resultText)
+                    val value = resultText?.toFloat()
+                    if (value != null) {
+                        val one = 23.0
+                        val two = 59.0
+                        val three = 95.0
+                        val four = 131.5
+                        val five = 160.0
+                        if(value<=one) {
+                            var last = sharedPreferences?.getInt("first", 1)
+                            if (last == 6){
+                                last = 1
+                            }
+                            val editor = sharedPreferences?.edit()
+                            editor?.apply{
+                                putFloat("first" + last.toString(), value)
+                                putInt("first", last!!+1)
+                            }?.apply()
+                            Handler(Looper.getMainLooper()).post {
+                                Toast.makeText(activity, "1-"+last.toString(), Toast.LENGTH_SHORT).show()
+                            }
+                        }
+
+                        if(one<value && value<=two) {
+                            var last = sharedPreferences?.getInt("second", 1)
+                            if(last==6) {
+                                last = 1
+                            }
+                            val editor = sharedPreferences?.edit()
+                            editor?.apply{
+                                putFloat("second" + last.toString(), value)
+                                putInt("second", last!!+1)
+                            }?.apply()
+                            Handler(Looper.getMainLooper()).post {
+                                Toast.makeText(activity, "2-"+last.toString(), Toast.LENGTH_SHORT).show()
+                            }
+
+                        }
+
+                        if(two<value && value<=three) {
+                            var last = sharedPreferences?.getInt("third", 1)
+                            if(last==6) {
+                                last = 1
+                            }
+                            val editor = sharedPreferences?.edit()
+                            editor?.apply{
+                                putFloat("third" + last.toString(), value)
+                                putInt("third", last!!+1)
+                            }?.apply()
+                            Handler(Looper.getMainLooper()).post {
+                                Toast.makeText(activity, "3-"+last.toString(), Toast.LENGTH_SHORT).show()
+                            }
+                        }
+
+                        if(three<value && value<=four) {
+                            var last = sharedPreferences?.getInt("fourth", 1)
+                            if(last==6) {
+                                last = 1
+                            }
+                            val editor = sharedPreferences?.edit()
+                            editor?.apply{
+                                putFloat("fourth" + last.toString(), value)
+                                putInt("fourth", last!!+1)
+                            }?.apply()
+                            Handler(Looper.getMainLooper()).post {
+                                Toast.makeText(activity, "4-"+last.toString(), Toast.LENGTH_SHORT).show()
+                            }
+                        }
+
+                        if(four<value && value<=five) {
+                            var last = sharedPreferences?.getInt("fifth", 1)
+                            if(last==6) {
+                                last = 1
+                            }
+                            val editor = sharedPreferences?.edit()
+                            editor?.apply{
+                                putFloat("fifth" + last.toString(), value)
+                                putInt("fifth", last!!+1)
+                            }?.apply()
+                            Handler(Looper.getMainLooper()).post {
+                                Toast.makeText(activity, "5-"+last.toString(), Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
                     activity?.runOnUiThread {
-                        binding.tvValue.text = resultText +" см"
+                        binding.tvValue.text = resultText +"\nсм"
                     }
                 }
             } catch (i: IOException) {
-                println("Пиздкец")
+
             }
 
         }.start()

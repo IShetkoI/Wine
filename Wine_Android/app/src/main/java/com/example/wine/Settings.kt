@@ -14,10 +14,11 @@ import com.example.wine.databinding.ActivityMainBinding
 import com.example.wine.databinding.FragmentSettingsBinding
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import java.text.SimpleDateFormat
+import java.util.*
 
 class Settings : Fragment() {
     private val dataModel: DataModel by activityViewModels()
-    private lateinit var request: Request
 
     lateinit var binding: FragmentSettingsBinding
 
@@ -42,7 +43,9 @@ class Settings : Fragment() {
             editor?.apply{
                 putString("ip", binding.edit.text.toString())
             }?.apply()
-            Toast.makeText(activity, binding.edit.text.toString(), Toast.LENGTH_SHORT).show()
+            val sdf = SimpleDateFormat("kk:mm:ss-dd/M/yyyy")
+            val currentDate = sdf.format(Date())
+            Toast.makeText(activity, currentDate, Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -11,7 +11,7 @@
     <RelativeLayout
         android:id="@+id/main_holder"
         android:layout_width="match_parent"
-        android:layout_height="465dp"
+        android:layout_height="561dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,17 +19,44 @@
         tools:context=".Humidity">
 
         <soup.neumorphism.NeumorphCardView
-            android:id="@+id/cvDistance"
             style="@style/Widget.Neumorph.CardView"
-            android:layout_width="295dp"
-            android:layout_height="289dp"
-            app:neumorph_shadowColorDark="#43556F9A"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="38dp"
-            android:layout_marginEnd="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:neumorph_shadowColorDark="#43556F9A"
+            app:neumorph_shapeType="flat">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="Humidity"
+                android:textColor="@color/text_color"
+                android:textSize="24sp" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cvHumidity"
+            style="@style/Widget.Neumorph.CardView"
+            android:layout_width="295dp"
+            android:layout_height="295dp"
+            app:neumorph_shadowColorDark="#43556F9A"
+            android:layout_above="@+id/bMeasureHumidity"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="30dp"
             app:neumorph_shapeType="basin">
 
             <TextView
@@ -39,7 +66,6 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
                 android:textColor="@color/text_color"
-
                 android:textSize="96sp" />
 
         </soup.neumorphism.NeumorphCardView>
@@ -47,22 +73,20 @@
         <soup.neumorphism.NeumorphButton
             android:id="@+id/bMeasureHumidity"
             style="@style/Widget.Neumorph.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="69dp"
-            android:layout_below="@+id/cvDistance"
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            app:neumorph_shadowColorDark="#43556F9A"
-            android:layout_marginStart="59dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="54dp"
-            android:layout_marginBottom="46dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="45dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
+            app:neumorph_shadowColorDark="#43556F9A"
             android:text="Measure"
             android:textColor="@color/text_color"
-            android:textSize="20sp" />
+            android:textSize="24sp" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

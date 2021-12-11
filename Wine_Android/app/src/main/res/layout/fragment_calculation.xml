@@ -1,50 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/set"
     android:layout_width="match_parent"
-    android:layout_height="600dp"
+    android:layout_height="match_parent"
     android:background="#ecf0f3"
-    tools:context=".Calculation">
+    tools:context=".Home">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
+        android:id="@+id/main_holder"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="561dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <soup.neumorphism.NeumorphButton
-            android:id="@+id/neumorphButton"
-            style="@style/Widget.Neumorph.Button"
-            android:layout_width="367dp"
-            android:layout_height="165dp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/bThree"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/bOne"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20.25dp"
+            android:layout_marginEnd="13.3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icthree"
+            app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <soup.neumorphism.NeumorphButton
-            android:id="@+id/neumorphButton2"
-            style="@style/Widget.Neumorph.Button"
-            android:layout_width="354dp"
-            android:layout_height="339dp"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/neumorphButton"
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/bFive"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/bThree"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20.25dp"
+            android:layout_marginEnd="13.3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/five"
+            app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <soup.neumorphism.NeumorphButton
-            style="@style/Widget.Neumorph.Button"
-            android:layout_width="354dp"
-            android:layout_height="339dp"
-            android:layout_marginStart="6dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/neumorphButton2"
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/bFour"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/bTwo"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13.3dp"
+            android:layout_marginTop="20.25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/four"
+            app:neumorph_shadowColorDark="#43556F9A"
             tools:ignore="SpeakableTextPresentCheck" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/bManually"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="13.3dp"
+            android:layout_marginTop="20.25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/manual"
+            app:neumorph_shadowColorDark="#43556F9A"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/bOne"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20.25dp"
+            android:layout_marginEnd="13.3dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/one"
+            app:neumorph_shadowColorDark="#43556F9A"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <soup.neumorphism.NeumorphImageButton
+            android:id="@+id/bTwo"
+            style="@style/Widget.Neumorph.ImageButton"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/bManually"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13.3dp"
+            android:layout_marginTop="20.25dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ictwo"
+            app:neumorph_shadowColorDark="#43556F9A"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

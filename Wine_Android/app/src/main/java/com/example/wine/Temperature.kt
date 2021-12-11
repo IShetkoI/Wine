@@ -1,5 +1,6 @@
 package com.example.wine
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -35,33 +36,27 @@ class Temperature : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.bMeasureTemp.setOnClickListener{
-            dataModel.ip.observe(activity as LifecycleOwner, {
-                post(it)
-            })
+            post()
         }
     }
 
-    private fun post(ip: String) {
-        Toast.makeText(activity, "Post", Toast.LENGTH_SHORT).show()
-
+    private fun post() {
         Thread {
-            request = Request.Builder().url("http://${ip}/temperature").build()
+            val sharedPreferences = this.activity?.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
+            val savedString = sharedPreferences?.getString("ip", null).toString()
+            println(savedString)
+            request = Request.Builder().url("http://${savedString}/temperature").build()
             try {
-                println("1")
-
                 val response = client.newCall(request).execute()
-                println("2")
                 if (response.isSuccessful) {
-                    println("3")
                     val resultText = response.body()?.string()
                     println(resultText)
                     activity?.runOnUiThread {
-                        binding.tvValue.text = resultText
-                        Toast.makeText(activity, resultText.toString(), Toast.LENGTH_SHORT).show()
+                        binding.tvValue.text = resultText +" C"
                     }
                 }
             } catch (i: IOException) {
-                println("Пиздкец")
+                println("NOOOOOOO")
             }
 
         }.start()
@@ -69,7 +64,7 @@ class Temperature : Fragment() {
 
     companion object {
         @JvmStatic
-        fun newInstance() = Distance()
+        fun newInstance() = Temperature()
 
     }
 }
