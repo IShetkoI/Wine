@@ -41,7 +41,7 @@ class Humidity : Fragment() {
     }
 
     private fun post(ip: String) {
-        Toast.makeText(activity, "Post", Toast.LENGTH_SHORT).show()
+
 
         Thread {
             request = Request.Builder().url("http://${ip}/humidity").build()

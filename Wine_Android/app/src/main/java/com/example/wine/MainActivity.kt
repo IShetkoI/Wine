@@ -6,6 +6,8 @@ package com.example.wine
 
 import android.content.SharedPreferences
 import android.graphics.Color
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -24,6 +26,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pref: SharedPreferences
     private lateinit var request: Request
     private val dataModel: DataModel by viewModels()
+    private var soundPool: SoundPool? = null
+    private val soundId = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Wine_Light)
@@ -42,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
             editor?.apply{
                 putString("ip", "")
+                putString("history", "")
+
+                putFloat("min", 0F)
+                putFloat("max", 0F)
 
                 editor.putInt("first", 1)
                 editor.putInt("second", 1)
@@ -91,9 +99,17 @@ class MainActivity : AppCompatActivity() {
             pref.edit().putBoolean("firstrun", false).apply();
         }
 
+        soundPool = SoundPool(6, AudioManager.STREAM_MUSIC, 0)
+        soundPool!!.load(baseContext, R.raw.wine, 1)
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            soundPool?.play(soundId, 1F, 1F, 0, 0, 1F)
+
+        }, 1130)
         Handler(Looper.getMainLooper()).postDelayed({
             val motionLayout: MotionLayout = binding.startWindow
             motionLayout.transitionToEnd()
+
         }, 2000)
 
 
@@ -101,7 +117,6 @@ class MainActivity : AppCompatActivity() {
             binding.bDistance.visibility = View.GONE
             binding.bThermometer.visibility = View.GONE
             binding.bHumidity.visibility = View.GONE
-            binding.bHistory.visibility = View.GONE
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Distance.newInstance())
@@ -111,7 +126,6 @@ class MainActivity : AppCompatActivity() {
             binding.bDistance.visibility = View.GONE
             binding.bThermometer.visibility = View.GONE
             binding.bHumidity.visibility = View.GONE
-            binding.bHistory.visibility = View.GONE
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Temperature.newInstance())
@@ -121,25 +135,18 @@ class MainActivity : AppCompatActivity() {
             binding.bDistance.visibility = View.GONE
             binding.bThermometer.visibility = View.GONE
             binding.bHumidity.visibility = View.GONE
-            binding.bHistory.visibility = View.GONE
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Humidity.newInstance())
                 .commit()
         }
-        binding.bHistory.setOnClickListener{
-            binding.bDistance.visibility = View.GONE
-            binding.bThermometer.visibility = View.GONE
-            binding.bHumidity.visibility = View.GONE
-            binding.bHistory.visibility = View.GONE
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.main_holder, History.newInstance())
-                .commit()
-        }
+
 
 
         binding.bHome.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
             binding.bHome.setShadowColorLight(Color.parseColor("#D5FAFD"))
             binding.bHome.setShadowColorDark(Color.parseColor("#63EF96C5"))
 
@@ -158,6 +165,9 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
         binding.bSettings.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
             binding.bSettings.setShadowColorLight(Color.parseColor("#D5FAFD"))
             binding.bSettings.setShadowColorDark(Color.parseColor("#63EF96C5"))
 
@@ -176,6 +186,9 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
         binding.bCalc.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
             binding.bCalc.setShadowColorLight(Color.parseColor("#D5FAFD"))
             binding.bCalc.setShadowColorDark(Color.parseColor("#63EF96C5"))
 
@@ -191,6 +204,27 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Calculation.newInstance())
+                .commit()
+        }
+        binding.bHistory.setOnClickListener{
+            binding.bDistance.visibility = View.GONE
+            binding.bThermometer.visibility = View.GONE
+            binding.bHumidity.visibility = View.GONE
+            binding.bHistory.setShadowColorLight(Color.parseColor("#D5FAFD"))
+            binding.bHistory.setShadowColorDark(Color.parseColor("#63EF96C5"))
+
+            binding.bHome.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bHome.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bSettings.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bSettings.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            binding.bCalc.setShadowColorLight(Color.parseColor("#FFFFFF"))
+            binding.bCalc.setShadowColorDark(Color.parseColor("#43556F9A"))
+
+            supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.main_holder, History.newInstance())
                 .commit()
         }
     }

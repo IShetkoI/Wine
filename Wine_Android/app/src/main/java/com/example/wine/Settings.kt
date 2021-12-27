@@ -3,6 +3,8 @@ package com.example.wine
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -32,6 +34,57 @@ class Settings : Fragment() {
         val sharedPreferences = this.activity?.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
         val savedString = sharedPreferences?.getString("ip", null).toString()
         getIp(savedString)
+
+        var value = sharedPreferences?.getFloat("min", 0F)
+        binding.edMin.setText(value.toString())
+
+        value = sharedPreferences?.getFloat("max", 0F)
+        binding.edMax.setText(value.toString())
+
+        binding.edMin.addTextChangedListener(object : TextWatcher {
+
+            override fun afterTextChanged(s: Editable) {
+
+            }
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {
+                if (sharedPreferences != null && s != "") {
+                    if(binding.edMin.text.toString()!="") {
+                        val editor = sharedPreferences.edit()
+                        editor?.apply {
+                            putFloat("min", s.toString().toFloat())
+                        }?.apply()
+                    }
+                }
+            }
+        })
+
+        binding.edMax.addTextChangedListener(object : TextWatcher {
+
+            override fun afterTextChanged(s: Editable) {
+
+            }
+            override fun beforeTextChanged(s: CharSequence, start: Int,
+                                           count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence, start: Int,
+                                       before: Int, count: Int) {
+                if (sharedPreferences != null && s != "") {
+                    if(binding.edMax.text.toString()!="") {
+                        val editor = sharedPreferences.edit()
+                        editor?.apply {
+                            putFloat("max", s.toString().toFloat())
+                        }?.apply()
+                    }
+                }
+            }
+        })
+
         return binding.root
     }
 
@@ -43,9 +96,6 @@ class Settings : Fragment() {
             editor?.apply{
                 putString("ip", binding.edit.text.toString())
             }?.apply()
-            val sdf = SimpleDateFormat("kk:mm:ss-dd/M/yyyy")
-            val currentDate = sdf.format(Date())
-            Toast.makeText(activity, currentDate, Toast.LENGTH_SHORT).show()
         }
     }
 

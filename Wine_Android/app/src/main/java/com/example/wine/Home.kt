@@ -34,21 +34,18 @@ class Home : Fragment() {
                 .beginTransaction()
                 .replace(R.id.main_holder, Distance.newInstance())
                 .commit()
-            Toast.makeText(activity, "Distance", Toast.LENGTH_SHORT).show()
         }
         binding.bThermometer.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Temperature.newInstance())
                 .commit()
-            Toast.makeText(activity, "Temperature", Toast.LENGTH_SHORT).show()
         }
         binding.bHumidity.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Humidity.newInstance())
                 .commit()
-            Toast.makeText(activity, "Humidity", Toast.LENGTH_SHORT).show()
         }
     }
 

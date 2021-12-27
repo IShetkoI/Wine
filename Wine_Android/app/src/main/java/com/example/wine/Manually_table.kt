@@ -2,6 +2,7 @@ package com.example.wine
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -196,9 +197,11 @@ class Manually_table : Fragment() {
         if(binding.edThird.text.toString() == "" ) {
             binding.edThird.setText("0")
         }
+        binding.scroll.topEdgeEffectColor = Color.parseColor("#5AECF8")
 
+        binding.scroll.bottomEdgeEffectColor = Color.parseColor("#63EF96C5")
 
-            return binding.root
+        return binding.root
     }
 
     private fun setvalue(sp: SharedPreferences) = with(binding){

@@ -20,20 +20,6 @@
         app:neumorph_shadowColorDark="#43556F9A"
         tools:ignore="ExtraText">
 
-        <soup.neumorphism.NeumorphFloatingActionButton
-            android:id="@+id/btsync"
-            style="@style/Widget.Neumorph.FloatingActionButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="bottom|right"
-            android:layout_marginEnd="4dp"
-            android:src="@drawable/sync"
-            android:scaleType="centerInside"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-            app:layout_constraintEnd_toStartOf="@+id/scrollView2"
-            app:neumorph_shadowColorDark="#43556F9A"
-            tools:ignore="SpeakableTextPresentCheck" />
-
         <ScrollView
             android:id="@+id/scrollView2"
             android:layout_width="338dp"
@@ -81,7 +67,7 @@
                 </soup.neumorphism.NeumorphCardView>
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/tv_history"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -99,6 +85,33 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </ScrollView>
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/bttrash"
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="80dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/trash"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+            app:layout_constraintEnd_toStartOf="@+id/scrollView2"
+            app:neumorph_shadowColorDark="#43556F9A"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <soup.neumorphism.NeumorphFloatingActionButton
+            android:id="@+id/btsync"
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sync"
+            app:neumorph_shadowColorDark="#43556F9A"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </soup.neumorphism.NeumorphCardView>
 

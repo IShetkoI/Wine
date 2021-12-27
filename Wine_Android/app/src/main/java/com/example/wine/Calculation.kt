@@ -27,47 +27,42 @@ class Calculation : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         binding.bManually.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Manually_table.newInstance())
                 .commit()
-            Toast.makeText(activity, "Manually", Toast.LENGTH_SHORT).show()
         }
         binding.bOne.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, First_table.newInstance())
                 .commit()
-            Toast.makeText(activity, "First_table", Toast.LENGTH_SHORT).show()
         }
         binding.bTwo.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Second_table.newInstance())
                 .commit()
-            Toast.makeText(activity, "Second_table", Toast.LENGTH_SHORT).show()
         }
         binding.bThree.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Third_table.newInstance())
                 .commit()
-            Toast.makeText(activity, "Third_table", Toast.LENGTH_SHORT).show()
         }
         binding.bFour.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Fourth_table.newInstance())
                 .commit()
-            Toast.makeText(activity, "Fourth_table", Toast.LENGTH_SHORT).show()
         }
         binding.bFive.setOnClickListener{
             (activity as MainActivity).supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.main_holder, Fifth_table.newInstance())
                 .commit()
-            Toast.makeText(activity, "Fifth_table", Toast.LENGTH_SHORT).show()
         }
     }
 

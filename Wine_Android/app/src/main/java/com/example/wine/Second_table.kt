@@ -2,6 +2,7 @@ package com.example.wine
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -54,6 +55,8 @@ class Second_table : Fragment() {
                 }
             }
         })
+        binding.scroll.topEdgeEffectColor = Color.parseColor("#5AECF8")
+        binding.scroll.bottomEdgeEffectColor = Color.parseColor("#63EF96C5")
 
         binding.clear.setOnClickListener(doubleClick)
 
@@ -112,7 +115,7 @@ class Second_table : Fragment() {
             binding.resQ.text = "NaN"
         }
         try {
-            binding.resV.text = ((((qvad/8.0)/(sqrt(ckochisl/4.0)))*st).roundToInt()/st).toString()
+            binding.resV.text = ((binding.resQ.text.toString().toFloat()/binding.resCko.text.toString().toFloat()*st).roundToInt()/st).toString()
         }
         catch (e: Exception){
             binding.resV.text = "NaN"

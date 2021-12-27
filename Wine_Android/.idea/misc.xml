@@ -5,21 +5,23 @@
       <map>
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/drawable/button_gradient.xml" value="0.4649789029535865" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/drawable/cursor.xml" value="0.46794871794871795" />
-        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fghjk.xml" value="0.27136752136752135" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_calculation.xml" value="0.5" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_distance.xml" value="0.3360488798370672" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_fifth_table.xml" value="0.3252136752136752" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_first_table.xml" value="0.31367521367521367" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_fourth_table.xml" value="0.3252136752136752" />
-        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_history.xml" value="0.4829136690647482" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_history.xml" value="0.5" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_humidity.xml" value="0.2" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_manually_table.xml" value="0.4161735700197239" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_second_table.xml" value="0.31367521367521367" />
-        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_settings.xml" value="0.5" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_temperature.xml" value="0.22180451127819548" />
         <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/layout/fragment_third_table.xml" value="0.5" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.46794871794871795" />
+        <entry key="..\:/Android studio/Coursework/Wine/Wine_Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3384615384615385" />
         <entry key="..\:/Android studio/Wine/app/src/main/res/drawable/cursor.xml" value="0.5692708333333333" />
         <entry key="..\:/Android studio/Wine/app/src/main/res/drawable/no_background.xml" value="0.5692708333333333" />
         <entry key="..\:/Android studio/Wine/app/src/main/res/layout/activity_app_menu.xml" value="0.4547008547008547" />
